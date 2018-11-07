@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.Devices.OneWire</id>
+    <version>$version$</version>
+    <title>nanoFramework.Devices.OneWire</title>
+    <authors>nanoFramework project contributors</authors>
+    <owners>nanoFramework project contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
+    <copyright>Copyright (c) 2018 The nanoFramework project contributors</copyright>    
+    <description>This package includes the nanoFramework.Devices.OneWire assembly for nanoFramework C# projects.</description>
+    <summary>nanoFramework.Devices.OneWire assembly for nanoFramework C# projects</summary>
+    <tags>nanoFramework C# csharp netmf netnf nanoFramework.Devices.OneWire</tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="[1.0.5-preview024]" />
+    </dependencies>    
+  </metadata>
+  <files>
+    <file src="nanoFramework.Devices.OneWire\bin\Release\nanoFramework.Devices.OneWire.dll" target="lib\nanoFramework.Devices.OneWire.dll" />
+    <file src="nanoFramework.Devices.OneWire\bin\Release\nanoFramework.Devices.OneWire.pdb" target="lib\nanoFramework.Devices.OneWire.pdb" />
+    <file src="nanoFramework.Devices.OneWire\bin\Release\nanoFramework.Devices.OneWire.pdbx" target="lib\nanoFramework.Devices.OneWire.pdbx" />
+    <file src="nanoFramework.Devices.OneWire\bin\Release\nanoFramework.Devices.OneWire.pe" target="lib\nanoFramework.Devices.OneWire.pe" />
+    <file src="nanoFramework.Devices.OneWire\bin\Release\nanoFramework.Devices.OneWire.xml" target="lib\nanoFramework.Devices.OneWire.xml" /> 
+  </files>
+</package>
