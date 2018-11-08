@@ -12,7 +12,7 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.Devices.OneWire | [![Build status](https://ci.appveyor.com/api/projects/status/9vnpnwek2jo385q2/branch/master?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-devices-onewire/branch/master) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Devices.OneWire.svg)](https://www.nuget.org/packages/nanoFramework.Devices.OneWire/)  |
+| nanoFramework.Devices.OneWire | [![Build status](https://ci.appveyor.com/api/projects/status/9vnpnwek2jo385q2/branch/master?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-devices-onewire/branch/master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Devices.OneWire.svg)](https://www.nuget.org/packages/nanoFramework.Devices.OneWire/)  |
 | nanoFramework.Devices.OneWire (preview) | [![Build status](https://ci.appveyor.com/api/projects/status/9vnpnwek2jo385q2/branch/develop?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-devices-onewire/branch/develop) | [![MyGet Pre Release](https://img.shields.io/myget/nanoframework-dev/vpre/nanoFramework.Devices.OneWire.svg)](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Devices.OneWire) |
 
 
