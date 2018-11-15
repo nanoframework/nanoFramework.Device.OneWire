@@ -16,7 +16,7 @@
     <summary>nanoFramework.Devices.OneWire assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Devices.OneWire</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="[1.0.5-preview024]" />
+      <dependency id="nanoFramework.CoreLibrary" version="[1.0.6-preview-001]" />
     </dependencies>    
   </metadata>
   <files>
