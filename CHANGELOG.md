@@ -6,6 +6,7 @@
 
 **Documentation and other chores:**
 
+- Bumps nanoFramework.CoreLibrary from 1.2.0 to 1.2.1-preview-001 [\#14](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/14)
 - Bumps nanoFramework.CoreLibrary from 1.1.1 to 1.2.0 [\#13](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/13)
 
 ## [v1.0.3](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.3) (2019-01-21)
