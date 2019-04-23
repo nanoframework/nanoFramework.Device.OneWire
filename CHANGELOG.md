@@ -1,8 +1,7 @@
 # Change Log
 
-## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/HEAD)
-
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.3...HEAD)
+## [v1.0.2-preview-012](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.2-preview-012) (2019-04-23)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.3...v1.0.2-preview-012)
 
 **Documentation and other chores:**
 
