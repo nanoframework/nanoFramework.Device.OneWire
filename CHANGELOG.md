@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.0.2-preview-013](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.2-preview-013) (2019-04-23)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.2-preview-012...v1.0.2-preview-013)
+
 ## [v1.0.2-preview-012](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.2-preview-012) (2019-04-23)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.3...v1.0.2-preview-012)
 
