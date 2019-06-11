@@ -1,5 +1,13 @@
 # Change Log
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.6-preview.1...HEAD)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.2.1-preview-001 to 1.2.2-preview.20 [\#18](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/18)
+
 ## [v1.0.6-preview.1](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.6-preview.1) (2019-06-04)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.5-preview.1...v1.0.6-preview.1)
 
