@@ -2,7 +2,14 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.7-preview.1...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.7-preview.3...HEAD)
+
+**Documentation and other chores:**
+
+- Work on native assembly declaration [\#22](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/22) [[Breaking-Change](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/labels/Breaking-Change)]
+
+## [v1.0.7-preview.3](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.7-preview.3) (2019-06-20)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.0.7-preview.1...v1.0.7-preview.3)
 
 **Documentation and other chores:**
 
