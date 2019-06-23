@@ -6,6 +6,7 @@
 
 **Documentation and other chores:**
 
+- Bumps nanoFramework.CoreLibrary from 1.2.6-preview.1 to 1.2.6-preview.7 [\#25](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/25)
 - Work on native assembly declaration [\#22](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/22) [[Breaking-Change](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/labels/Breaking-Change)]
 
 ## [v1.0.7-preview.3](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.0.7-preview.3) (2019-06-20)
