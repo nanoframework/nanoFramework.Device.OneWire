@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.2.0](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.2.0) (2020-06-12)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0-preview.19...v1.2.0)
+
+**Documentation and other chores:**
+
+- Release release-v1.2.0 [\#49](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/49)
+
 ## [v1.2.0-preview.19](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.2.0-preview.19) (2020-06-11)
 
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0-preview.17...v1.2.0-preview.19)
