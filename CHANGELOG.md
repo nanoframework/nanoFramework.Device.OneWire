@@ -2,7 +2,31 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0-preview.17...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.3.0...HEAD)
+
+**Documentation and other chores:**
+
+- Update dependencies [\#51](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/51)
+
+## [v1.3.0](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.3.0) (2020-06-17)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0...v1.3.0)
+
+**Documentation and other chores:**
+
+- Release release-v1.3.0 [\#50](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/50)
+
+## [v1.2.0](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.2.0) (2020-06-12)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0-preview.19...v1.2.0)
+
+**Documentation and other chores:**
+
+- Release release-v1.2.0 [\#49](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/pull/49)
+
+## [v1.2.0-preview.19](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/tree/v1.2.0-preview.19) (2020-06-11)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire/compare/v1.2.0-preview.17...v1.2.0-preview.19)
 
 **Documentation and other chores:**
 
