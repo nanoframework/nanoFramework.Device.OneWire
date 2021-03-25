@@ -25,7 +25,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   nugetPackageName: 'nanoFramework.Devices.OneWire'
-  repoName: 'lib-nanoFramework.Devices.OneWire'
+  repoName: 'nanoFramework.Devices.OneWire'
 
 steps:
 
