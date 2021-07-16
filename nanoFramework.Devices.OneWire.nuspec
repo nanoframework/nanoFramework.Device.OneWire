@@ -14,13 +14,13 @@
     <projectUrl>https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire</projectUrl>
     <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
     <repository type="git" url="https://github.com/nanoframework/lib-nanoFramework.Devices.OneWire" commit="$commit$" />
-    <copyright>Copyright (c) 2018 The nanoFramework project contributors</copyright>
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the nanoFramework.Devices.OneWire assembly for nanoFramework C# projects.
 This package requires a target with nanoFramework.Devices.OneWire v$nativeVersion$.</description>
     <summary>nanoFramework.Devices.OneWire assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Devices.OneWire</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.7.3" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.10.5" />
     </dependencies>
   </metadata>
   <files>
