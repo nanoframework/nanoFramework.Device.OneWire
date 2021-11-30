@@ -15,10 +15,11 @@
     <projectUrl>https://github.com/nanoframework/nanoFramework.Devices.OneWire</projectUrl>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.Devices.OneWire" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
-    <description>This package includes the nanoFramework.Devices.OneWire assembly for nanoFramework C# projects.&#10;This package requires a target with nanoFramework.Devices.OneWire v$nativeVersion$ (checksum $checksum$).</description>
+    <description>This package includes the nanoFramework.Devices.OneWire assembly for nanoFramework C# projects.
+This package requires a target with nanoFramework.Devices.OneWire v$nativeVersion$ (checksum $checksum$).</description>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Devices.OneWire</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.10.5" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.11.6-preview.2" />
     </dependencies>
   </metadata>
   <files>
