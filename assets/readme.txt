@@ -6,7 +6,7 @@
                                                                                
 ===================================================================================
 
-API docs: https://docs.nanoframework.net/api/nanoFramework.Networking.Sntp.html
+API docs: https://docs.nanoframework.net/api/nanoFramework.Devices.OneWire.html
 
 Browse our samples repository: https://github.com/nanoframework/samples
 
