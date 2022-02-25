@@ -1,6 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -12,5 +10,5 @@ using System.Runtime.InteropServices;
 
 ////////////////////////////////////////////////////////////////
 // update this whenever the native assembly signature changes //
-[assembly: AssemblyNativeVersion("100.0.3.4")]
+[assembly: AssemblyNativeVersion("100.0.4.0")]
 ////////////////////////////////////////////////////////////////

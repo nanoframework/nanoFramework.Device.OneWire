@@ -29,4 +29,4 @@ jobs:
       - name: Update dependencies
         uses: nanoframework/nanodu@v1
         with:
-          solutionsToCheck: 'nanoFramework.Devices.OneWire.sln'
+          solutionsToCheck: 'nanoFramework.Device.OneWire.sln'

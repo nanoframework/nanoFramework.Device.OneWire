@@ -30,7 +30,7 @@
   <PropertyGroup>
     <!-- override default options for MetaDataProcessor -->
     <NF_GenerateStubsDirectory>bin\$(Configuration)\Stubs</NF_GenerateStubsDirectory>
-    <NF_GenerateSkeletonProjectName>nf_device_onewire_native</NF_GenerateSkeletonProjectName>
+    <NF_GenerateSkeletonProjectName>nf_dev_onewire</NF_GenerateSkeletonProjectName>
     <Name>nanoFramework.Device.OneWire</Name>
   </PropertyGroup>
   <ItemGroup>
@@ -40,7 +40,7 @@
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="OneWire.cs" />
+    <Compile Include="OneWireHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

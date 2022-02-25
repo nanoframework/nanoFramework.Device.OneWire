@@ -4,7 +4,7 @@
 
 -----
 
-### Welcome to the .NET **nanoFramework** 1-Wire Class Library repository
+# Welcome to the .NET **nanoFramework** 1-Wire&reg; Class Library repository
 
 ## Build status
 
@@ -12,6 +12,64 @@
 |:-|---|---|
 | nanoFramework.Device.OneWire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
 | nanoFramework.Device.OneWire (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
+
+## 1-Wire&reg; bus
+
+1-Wire&reg; it's a communication protocol, property of Maxim Semiconductor. You can read the technical details about it on [this guide](https://www.maximintegrated.com/en/design/technical-documents/tutorials/1/1796.html).
+
+## .NET nanoFramework implementation
+
+Our low level implementation of the 1-Wire communication uses an UART to achieve precise timing with the less possible burden on the MCU.
+For that reason it requires an UART and shunting together it's RX and TX pins. Depending on the bus length and impedance it may be required connecting an external pull-up resistor to provide the necessary signalling for 1-Wire communication.
+
+**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireHost`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snnipet below we're assigning GPIOs 16 and 17 to UART2.
+
+```csharp
+//////////////////////////////////////////////////////////////////////
+// Configure pins 16 and 17 to be used in UART2
+Configuration.SetPinFunction(16, DeviceFunction.COM2_RX);
+Configuration.SetPinFunction(17, DeviceFunction.COM2_TX);
+```
+
+For other devices, like STM32 ones, there is no need to configure the GPIO pins. You have to find in the respective device documentation what are the UART pins used for 1-Wire.
+
+## Usage examples
+
+To connect to a 1-Wire bus and perform operations with the connected devices, one has to first instantiate the OneWireHost.
+
+```csharp
+OneWireHost _OneWireHost = new OneWireHost();
+```
+
+To find the first device connected to the 1-Wire bus, and perform a reset on the bus before performing the search, the following call should be made:
+
+```csharp
+_OneWireHost.FindFirstDevice(true, false);
+```
+
+To write a byte with the value 0x44 to the connected device:
+
+```csharp
+_OneWireHost.WriteByte(0x44);
+```
+
+To get a list with the serial number of all the 1-Wire devices connected to the bus:
+
+```csharp
+var deviceList = _OneWireHost.FindAllDevices();
+
+foreach(byte[] device in deviceList)
+{
+    string serial = "";
+
+    foreach (byte b in device)
+    {
+        serial += b.ToString("X2");
+    }
+
+    Console.WriteLine($"{serial}");
+}
+```
 
 ## Feedback and documentation
 
