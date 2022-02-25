@@ -1,14 +1,13 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Devices.OneWire", "nanoFramework.Devices.OneWire\nanoFramework.Devices.OneWire.nfproj", "{F09E40CC-F335-4482-8426-33C1D350B11D}"
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Device.OneWire", "nanoFramework.Device.OneWire\nanoFramework.Device.OneWire.nfproj", "{F09E40CC-F335-4482-8426-33C1D350B11D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57190270-AB5A-4794-9674-86002069B655}"
 	ProjectSection(SolutionItems) = preProject
-		nanoFramework.Devices.OneWire.DELIVERABLES.nuspec = nanoFramework.Devices.OneWire.DELIVERABLES.nuspec
-		nanoFramework.Devices.OneWire.nuspec = nanoFramework.Devices.OneWire.nuspec
+		nanoFramework.Device.OneWire.DELIVERABLES.nuspec = nanoFramework.Device.OneWire.DELIVERABLES.nuspec
+		nanoFramework.Device.OneWire.nuspec = nanoFramework.Device.OneWire.nuspec
 		NuGet.Config = NuGet.Config
 		version.json = version.json
 	EndProjectSection
