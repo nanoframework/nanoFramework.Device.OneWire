@@ -7,10 +7,10 @@ using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace nanoFramework.Devices.OneWire
+namespace nanoFramework.Device.OneWire
 {
     /// <summary>
-    /// Represents a 1-Wire bus controller. The class provides methods and properties that an app can use to interact with the bus.
+    /// Represents a 1-Wire bus controller. The class provides methods and properties that an application can use to interact with the 1-Wire bus and connected devices.
     /// </summary>
     public class OneWireController
     {
@@ -21,8 +21,6 @@ namespace nanoFramework.Devices.OneWire
         // this is the backing field for the serial number on discovery or when performing a read/write operation
         // need to create it here to be used in native
         private byte[] _serialNumber = new byte[8];
-
-        // external One Wire functions from link layer owllu.c
 
         /// <summary>
         /// Reset all of the devices on the 1-Wire Net and return the result.
