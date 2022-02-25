@@ -10,10 +10,10 @@ using System.Runtime.CompilerServices;
 namespace nanoFramework.Device.OneWire
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="OneWireMaster"/> class.
-    /// Represents a 1-Wire bus master. The class provides methods and properties that an application can use to interact with the 1-Wire bus and connected devices.
+    /// Initializes a new instance of the <see cref="OneWireHost"/> class.
+    /// Represents a 1-Wire host. The class provides methods that an application can use to interact with the 1-Wire bus and connected devices.
     /// </summary>
-    public class OneWireMaster : IDisposable
+    public class OneWireHost : IDisposable
     {
         // flag to signal that an instance of the class has been created
         private static bool s_opened = false;
@@ -31,10 +31,10 @@ namespace nanoFramework.Device.OneWire
         // external One Wire functions from link layer owllu.c
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OneWireMaster"/> class.
+        /// Initializes a new instance of the <see cref="OneWireHost"/> class.
         /// </summary>
-        /// <exception cref="InvalidOperationException">If there is already another instance of the <see cref="OneWireMaster"/> class.</exception>
-        public OneWireMaster()
+        /// <exception cref="InvalidOperationException">If there is already another instance of the <see cref="OneWireHost"/> class.</exception>
+        public OneWireHost()
         {
             if (!s_opened)
             {
@@ -216,7 +216,7 @@ namespace nanoFramework.Device.OneWire
         }
 
         /// <inheritdoc/>
-        ~OneWireMaster()
+        ~OneWireHost()
         {
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
             Dispose(disposing: false);

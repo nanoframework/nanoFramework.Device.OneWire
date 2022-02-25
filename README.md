@@ -22,7 +22,7 @@
 Our low level implementation of the 1-Wire communication uses an UART to achieve precise timing with the less possible burden on the MCU.
 For that reason it requires an UART and shunting together it's RX and TX pins. Depending on the bus length and impedance it may be required connecting an external pull-up resistor to provide the necessary signalling for 1-Wire communication.
 
-**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireMaster`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snnipet below we're assigning GPIOs 16 and 17 to UART2.
+**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireHost`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snnipet below we're assigning GPIOs 16 and 17 to UART2.
 
 ```csharp
 //////////////////////////////////////////////////////////////////////
@@ -35,28 +35,28 @@ For other devices, like STM32 ones, there is no need to configure the GPIO pins.
 
 ## Usage examples
 
-To connect to a 1-Wire bus and perform operations with the connected devices, one has to first instantiate the OneWireMaster.
+To connect to a 1-Wire bus and perform operations with the connected devices, one has to first instantiate the OneWireHost.
 
 ```csharp
-OneWireMaster _oneWireMaster = new OneWireMaster();
+OneWireHost _OneWireHost = new OneWireHost();
 ```
 
 To find the first device connected to the 1-Wire bus, and perform a reset on the bus before performing the search, the following call should be made:
 
 ```csharp
-_oneWireMaster.FindFirstDevice(true, false);
+_OneWireHost.FindFirstDevice(true, false);
 ```
 
 To write a byte with the value 0x44 to the connected device:
 
 ```csharp
-_oneWireMaster.WriteByte(0x44);
+_OneWireHost.WriteByte(0x44);
 ```
 
 To get a list with the serial number of all the 1-Wire devices connected to the bus:
 
 ```csharp
-var deviceList = _oneWireMaster.FindAllDevices();
+var deviceList = _OneWireHost.FindAllDevices();
 
 foreach(byte[] device in deviceList)
 {
