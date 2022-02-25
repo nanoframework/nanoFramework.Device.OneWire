@@ -4,7 +4,7 @@
 
 -----
 
-### Welcome to the .NET **nanoFramework** 1-Wire&reg; Class Library repository
+# Welcome to the .NET **nanoFramework** 1-Wire&reg; Class Library repository
 
 ## Build status
 

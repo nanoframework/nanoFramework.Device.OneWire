@@ -26,7 +26,7 @@ namespace nanoFramework.Device.OneWire
         // need to create it here to be used in native
         private byte[] _serialNumber;
 
-        private bool _disposedValue;
+        private bool _disposed;
 
         // external One Wire functions from link layer owllu.c
 
@@ -38,7 +38,7 @@ namespace nanoFramework.Device.OneWire
         {
             if (!s_opened)
             {
-                _disposedValue = false;
+                _disposed = false;
 
                 NativeInit();
 
@@ -206,11 +206,11 @@ namespace nanoFramework.Device.OneWire
         /// <inheritdoc/>
         protected virtual void Dispose(bool disposing)
         {
-            if (!_disposedValue)
+            if (!_disposed)
             {
                 NativeDispose();
 
-                _disposedValue = true;
+                _disposed = true;
                 s_opened = false;
             }
         }
