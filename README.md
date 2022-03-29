@@ -1,17 +1,75 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_lib-nanoFramework.Devices.OneWire&metric=alert_status)](https://sonarcloud.io/dashboard?id=nanoframework_lib-nanoFramework.Devices.OneWire) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_lib-nanoFramework.Devices.OneWire&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=nanoframework_lib-nanoFramework.Devices.OneWire) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Devices.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Devices.OneWire/) [![#yourfirstpr](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://github.com/nanoframework/Home/blob/master/CONTRIBUTING.md) [![Discord](https://img.shields.io/discord/478725473862549535.svg?logo=discord&logoColor=white&label=Discord&color=7289DA)](https://discord.gg/gCyBu8T)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_nanoFramework.Device.OneWire&metric=alert_status)](https://sonarcloud.io/dashboard?id=nanoframework_nanoFramework.Device.OneWire) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=nanoframework_nanoFramework.Device.OneWire&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=nanoframework_nanoFramework.Device.OneWire) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) [![#yourfirstpr](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://github.com/nanoframework/Home/blob/master/CONTRIBUTING.md) [![Discord](https://img.shields.io/discord/478725473862549535.svg?logo=discord&logoColor=white&label=Discord&color=7289DA)](https://discord.gg/gCyBu8T)
 
 ![nanoFramework logo](https://raw.githubusercontent.com/nanoframework/Home/main/resources/logo/nanoFramework-repo-logo.png)
 
 -----
 
-### Welcome to the .NET **nanoFramework** 1-Wire Class Library repository
+# Welcome to the .NET **nanoFramework** 1-Wire&reg; Class Library repository
 
 ## Build status
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.Devices.OneWire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Devices.OneWire/_apis/build/status/nanoframework.lib-nanoFramework.Devices.OneWire?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Devices.OneWire/_build/latest?definitionId=15?branchName=master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Devices.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Devices.OneWire/)  |
-| nanoFramework.Devices.OneWire (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Devices.OneWire/_apis/build/status/nanoframework.lib-nanoFramework.Devices.OneWire?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Devices.OneWire/_build/latest?definitionId=15?branchName=develop) | [![](https://badgen.net/badge/NuGet/preview/D7B023?icon=https://simpleicons.now.sh/azuredevops/fff)](https://dev.azure.com/nanoframework/feed/_packaging?_a=package&feed=sandbox&package=nanoFramework.Devices.OneWire&protocolType=NuGet&view=overview) |
+| nanoFramework.Device.OneWire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
+| nanoFramework.Device.OneWire (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
+
+## 1-Wire&reg; bus
+
+1-Wire&reg; it's a communication protocol, property of Maxim Semiconductor. You can read the technical details about it on [this guide](https://www.maximintegrated.com/en/design/technical-documents/tutorials/1/1796.html).
+
+## .NET nanoFramework implementation
+
+Our low level implementation of the 1-Wire communication uses an UART to achieve precise timing with the less possible burden on the MCU.
+For that reason it requires an UART and shunting together it's RX and TX pins. Depending on the bus length and impedance it may be required connecting an external pull-up resistor to provide the necessary signalling for 1-Wire communication.
+
+**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireHost`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snnipet below we're assigning GPIOs 16 and 17 to UART2.
+
+```csharp
+//////////////////////////////////////////////////////////////////////
+// Configure pins 16 and 17 to be used in UART2
+Configuration.SetPinFunction(16, DeviceFunction.COM2_RX);
+Configuration.SetPinFunction(17, DeviceFunction.COM2_TX);
+```
+
+For other devices, like STM32 ones, there is no need to configure the GPIO pins. You have to find in the respective device documentation what are the UART pins used for 1-Wire.
+
+## Usage examples
+
+To connect to a 1-Wire bus and perform operations with the connected devices, one has to first instantiate the OneWireHost.
+
+```csharp
+OneWireHost _OneWireHost = new OneWireHost();
+```
+
+To find the first device connected to the 1-Wire bus, and perform a reset on the bus before performing the search, the following call should be made:
+
+```csharp
+_OneWireHost.FindFirstDevice(true, false);
+```
+
+To write a byte with the value 0x44 to the connected device:
+
+```csharp
+_OneWireHost.WriteByte(0x44);
+```
+
+To get a list with the serial number of all the 1-Wire devices connected to the bus:
+
+```csharp
+var deviceList = _OneWireHost.FindAllDevices();
+
+foreach(byte[] device in deviceList)
+{
+    string serial = "";
+
+    foreach (byte b in device)
+    {
+        serial += b.ToString("X2");
+    }
+
+    Console.WriteLine($"{serial}");
+}
+```
 
 ## Feedback and documentation
 
@@ -21,7 +79,7 @@ Join our Discord community [here](https://discord.gg/gCyBu8T).
 
 ## Credits
 
-The list of contributors to this project can be found at [CONTRIBUTORS](https://github.com/nanoframework/Home/blob/master/CONTRIBUTORS.md).
+The list of contributors to this project can be found at [CONTRIBUTORS](https://github.com/nanoframework/Home/blob/main/CONTRIBUTORS.md).
 
 ## License
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.Device.OneWire</id>
+    <version>$version$</version>
+    <title>nanoFramework.Device.OneWire</title>
+    <authors>nanoframework</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <releaseNotes>
+    </releaseNotes>
+    <readme>docs\README.md</readme>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.Device.OneWire</projectUrl>
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.Device.OneWire" commit="$commit$" />
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
+    <description>This package includes the nanoFramework.Device.OneWire assembly for .NET nanoFramework C# projects.
+This package requires a target with nanoFramework.Device.OneWire v$nativeVersion$ (checksum $checksum$).</description>
+    <tags>nanoFramework C# csharp netmf netnf OneWire 1wire</tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.12.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="nanoFramework.Device.OneWire\bin\Release\nanoFramework.Device.OneWire.dll" target="lib\nanoFramework.Device.OneWire.dll" />
+    <file src="nanoFramework.Device.OneWire\bin\Release\nanoFramework.Device.OneWire.pdb" target="lib\nanoFramework.Device.OneWire.pdb" />
+    <file src="nanoFramework.Device.OneWire\bin\Release\nanoFramework.Device.OneWire.pdbx" target="lib\nanoFramework.Device.OneWire.pdbx" />
+    <file src="nanoFramework.Device.OneWire\bin\Release\nanoFramework.Device.OneWire.pe" target="lib\nanoFramework.Device.OneWire.pe" />
+    <file src="nanoFramework.Device.OneWire\bin\Release\nanoFramework.Device.OneWire.xml" target="lib\nanoFramework.Device.OneWire.xml" />
+    <!-- readme -->
+    <file src="assets\readme.txt" target="" />
+    <file src="README.md" target="docs\" />
+    <file src="assets\nf-logo.png" target="images" />
+    <file src="LICENSE.md" target="" />
+  </files>
+</package>

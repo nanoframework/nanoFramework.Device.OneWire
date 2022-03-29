@@ -1,10 +1,28 @@
+# Copyright (c) .NET Foundation and Contributors
+# See LICENSE file in the project root for full license information.
+
 trigger:
   branches:
-    include: [main, develop, "release-*" ]
+    include:
+      - main
+      - develop
+      - release-*
   paths:
-    exclude: [README.md, LICENSE.md, NuGet.Config, .github_changelog_generator, .gitignore]
+    exclude:
+      - .github_changelog_generator
+      - .gitignore
+      - CHANGELOG.md
+      - CODE_OF_CONDUCT.md
+      - LICENSE.md
+      - README.md
+      - NuGet.Config
+      - assets/*
+      - config/*
+      - .github/*
+
   tags:
-    include: ["v*"]
+    include: 
+      - v*
 
 # PR always trigger build
 pr:
@@ -19,14 +37,14 @@ resources:
       endpoint: nanoframework
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-latest'
 
 variables:
   DOTNET_NOLOGO: true
-  solution: 'nanoFramework.Devices.OneWire.sln'
+  solution: 'nanoFramework.Device.OneWire.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  nugetPackageName: 'nanoFramework.Devices.OneWire'
+  nugetPackageName: 'nanoFramework.Device.OneWire'
 
 steps:
 
@@ -34,7 +52,7 @@ steps:
 # all build, update and publish steps
 - template: azure-pipelines-templates/class-lib-build.yml@templates
   parameters:
-    sonarCloudProject: 'nanoframework_lib-nanoFramework.Devices.OneWire'
+    sonarCloudProject: 'nanoframework_nanoFramework.Device.OneWire'
 
 # step from template @ nf-tools repo
 # report error

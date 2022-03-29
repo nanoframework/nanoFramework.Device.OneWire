@@ -7,22 +7,55 @@ using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace nanoFramework.Devices.OneWire
+namespace nanoFramework.Device.OneWire
 {
     /// <summary>
-    /// Represents a 1-Wire bus controller. The class provides methods and properties that an app can use to interact with the bus.
+    /// Initializes a new instance of the <see cref="OneWireHost"/> class.
+    /// Represents a 1-Wire host. The class provides methods that an application can use to interact with the 1-Wire bus and connected devices.
     /// </summary>
-    public class OneWireController
+    public class OneWireHost : IDisposable
     {
+        // flag to signal that an instance of the class has been created
+        private static bool s_opened = false;
+
         // this is used as the lock object 
-        // a lock is required because multiple threads can access the SerialDevice
-        private object _syncLock = new object();
+        // a lock is required because multiple threads can access the FindAllDevices method
+        private readonly object _syncLock;
 
         // this is the backing field for the serial number on discovery or when performing a read/write operation
         // need to create it here to be used in native
-        private byte[] _serialNumber = new byte[8];
+        private byte[] _serialNumber;
+
+        private bool _disposed;
 
         // external One Wire functions from link layer owllu.c
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OneWireHost"/> class.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">If there is already another instance of the <see cref="OneWireHost"/> class.</exception>
+        public OneWireHost()
+        {
+            if (!s_opened)
+            {
+                _disposed = false;
+
+                NativeInit();
+
+                // flag that we have this open and initialized
+                s_opened = true;
+
+                // create lock object
+                _syncLock = new();
+
+                // create array for serial number
+                _serialNumber = new byte[8];
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
+        }
 
         /// <summary>
         /// Reset all of the devices on the 1-Wire Net and return the result.
@@ -151,8 +184,61 @@ namespace nanoFramework.Devices.OneWire
                     result = FindNextDevice(true, false);
                 }
 
+
+                foreach(byte[] device in serialNumbers)
+                {
+                    string serial = "";
+
+                    foreach (byte b in device)
+                    {
+                        serial += b.ToString("X2");
+                    }
+
+                    Console.WriteLine($"{serial}");
+                }
+
                 return serialNumbers;
             }
         }
+
+        #region Dispose
+
+        /// <inheritdoc/>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                NativeDispose();
+
+                _disposed = true;
+                s_opened = false;
+            }
+        }
+
+        /// <inheritdoc/>
+        ~OneWireHost()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: false);
+        }
+
+        /// <inheritdoc/>
+        public void Dispose()
+        {
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
+
+        #endregion
+
+        #region Native methods
+
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        private extern void NativeDispose();
+
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        private extern void NativeInit();
+
+        #endregion
     }
 }
