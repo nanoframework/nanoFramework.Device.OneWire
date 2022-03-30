@@ -10,8 +10,7 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.Device.OneWire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
-| nanoFramework.Device.OneWire (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoframework.nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
+| nanoFramework.Device.OneWire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_apis/build/status/nanoFramework.Devices.OneWire?repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.Device.OneWire/_build/latest?definitionId=15&repoName=nanoframework%2FnanoFramework.Device.OneWire&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Device.OneWire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Device.OneWire/) |
 
 ## 1-Wire&reg; bus
 
