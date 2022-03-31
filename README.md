@@ -29,6 +29,9 @@ For that reason it requires an UART and shunting together it's RX and TX pins. D
 Configuration.SetPinFunction(16, DeviceFunction.COM2_RX);
 Configuration.SetPinFunction(17, DeviceFunction.COM2_TX);
 ```
+Take note, on some ESP32 development kits the pins you plan on using for UART2 could be used for internal purposes.
+For example, development kits based on either ESP32-WROOM-32 or ESP32-WROVER-E can have the same pinouts and silkscreen. If the kit is based on ESP32-WROVER-E the GPIOs 17 and 16 are used to address its extended memory (PSRAM), and cannot be used for other purposes, event though they are present as external pins.
+You can use any other GPIO pins that's free for UART2 pins using Configuration.SetPinFunction.
 
 For other devices, like STM32 ones, there is no need to configure the GPIO pins. You have to find in the respective device documentation what are the UART pins used for 1-Wire.
 
