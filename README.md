@@ -21,15 +21,16 @@
 Our low level implementation of the 1-Wire communication uses an UART to achieve precise timing with the less possible burden on the MCU.
 For that reason it requires an UART and shunting together it's RX and TX pins. Depending on the bus length and impedance it may be required connecting an external pull-up resistor to provide the necessary signalling for 1-Wire communication.
 
-**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireHost`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snnipet below we're assigning GPIOs 16 and 17 to UART2.
+**Important**: If you're using an ESP32 device it's mandatory to configure the UART2 pins before creating the `OneWireHost`. To do that, you have to add a reference to [`nanoFramework.Hardware.ESP32`](https://www.nuget.org/packages/nanoFramework.Hardware.Esp32). In the code snippet below we're assigning GPIOs 21 and 22 to UART2. Also note that `UART2` it's referred as `COM3` in C#.
 
 ```csharp
-//////////////////////////////////////////////////////////////////////
-// Configure pins 16 and 17 to be used in UART2
-Configuration.SetPinFunction(16, DeviceFunction.COM2_RX);
-Configuration.SetPinFunction(17, DeviceFunction.COM2_TX);
+////////////////////////////////////////////////////////////////////////
+// Configure pins 21 and 22 to be used in UART2 (that's refered as COM3)
+Configuration.SetPinFunction(21, DeviceFunction.COM3_RX);
+Configuration.SetPinFunction(22, DeviceFunction.COM3_TX);
 ```
-Take note, on some ESP32 development kits the pins you plan on using for UART2 could be used for internal purposes.
+
+Take note, on some ESP32 development kits, the pins you're planning on using for UART2 could be used for internal purposes.
 For example, development kits based on either ESP32-WROOM-32 or ESP32-WROVER-E can have the same pinouts and silkscreen. If the kit is based on ESP32-WROVER-E the GPIOs 17 and 16 are used to address its extended memory (PSRAM), and cannot be used for other purposes, event though they are present as external pins.
 You can use any other GPIO pins that's free for UART2 pins using Configuration.SetPinFunction.
 
