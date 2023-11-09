@@ -2,7 +2,18 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Device.OneWire/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.Device.OneWire/compare/v1.4.5...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Device.OneWire/compare/v1.4.8...HEAD)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#98](https://github.com/nanoframework/nanoFramework.Device.OneWire/pull/98)
+- Update 1 NuGet dependencies [\#97](https://github.com/nanoframework/nanoFramework.Device.OneWire/pull/97)
+- Update 1 NuGet dependencies [\#96](https://github.com/nanoframework/nanoFramework.Device.OneWire/pull/96)
+- Update 1 NuGet dependencies [\#95](https://github.com/nanoframework/nanoFramework.Device.OneWire/pull/95)
+
+## [v1.4.8](https://github.com/nanoframework/nanoFramework.Device.OneWire/tree/v1.4.8) (2022-12-22)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Device.OneWire/compare/v1.4.5...v1.4.8)
 
 **Documentation and other chores:**
 
