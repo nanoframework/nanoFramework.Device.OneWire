@@ -12,6 +12,7 @@
     <readme>docs\README.md</readme>
     <developmentDependency>false</developmentDependency>
     <projectUrl>https://github.com/nanoframework/nanoFramework.Device.OneWire</projectUrl>
+    <icon>images\nf-logo.png</icon>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.Device.OneWire" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the nanoFramework.Device.OneWire assembly for .NET nanoFramework C# projects.
